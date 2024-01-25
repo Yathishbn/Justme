@@ -272,16 +272,16 @@
             margin-top: 10px;
             padding: 10px;
             box-sizing: border-box;
-            background-color: transparent;
-            border: rgb(0, 0, 0) solid 2px;
-            color: rgb(0, 0, 0);
+            background-color: #720e9e;
+            border: #720e9e solid 2px;
+            color: rgb(196, 196, 196);
             text-transform: capitalize;
         }
 
         .card-cont .click:hover{
-            background-color: rgba(223, 223, 223, 0.123);
-            border: rgb(66, 99, 247) solid 2px;
-            color: rgb(66, 99, 247);
+            background-color: transparent;
+            
+            color: rgb(24, 24, 24);
         }
 
         
@@ -297,6 +297,7 @@
         .card-back{
             transform: rotateY(180deg);
             line-height: 1.6em;
+            overflow-y: scroll;
             background-color: rgb(255, 255, 255);
              padding: 15px;
              box-sizing: border-box;
@@ -378,11 +379,33 @@
 footer form input{
     background-color: transparent;
     border: none;
+    text-indent: 1rem;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: grey;
     border-bottom: white thin solid;
   line-height: 2em;
     transition: all .2s ease-in-out;
     width: 250px;
 }
+
+footer form input[type=submit]{
+    border: white medium solid;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-indent: 0rem;
+    color: black;
+}
+
+footer form input[type=submit]:focus, footer form input[type=submit]:hover{
+    transform: translateY(-.4em);
+    background-color: transparent;
+    color: white;
+
+}
+
+
 
  footer form input:focus{
     color: white;
@@ -520,6 +543,7 @@ footer form input{
                 <label><p> Name: <input type="name" name="name"  size="15"></p></label>
                 <label><p>Contact number: <input type="tel" name="ph-number" size="15"></p></label>
                 <label><p>Email: <input type="email" name="email" size="15"></p></label>
+                <p><input type="submit" name="submitted" value="submit"></p>
             </form>
 
             <article><p>Contact on</p>
