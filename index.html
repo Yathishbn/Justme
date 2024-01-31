@@ -119,6 +119,7 @@
 
         details > article > p > a{
             color: rgb(207, 207, 207);
+            margin-left: 10px;
             text-transform: capitalize;
         }
 
@@ -153,14 +154,22 @@
             margin: 0 auto;
         }
 
-        .tag h1, .tag h2, .tag p{
+        .tag h1, .tag p{
             margin-bottom: 25px;
         }
 
+        .price{
+            color: #d778ff;
+        }
+
+        .price2{
+            color: #b557dd;
+        }
         
 
-        .tag h2{
+        .tag p.h{
             margin-bottom: 40px;
+            font-weight: 800;
         }
 
         h1.hi{
@@ -171,18 +180,26 @@
 
         p.cta{
             padding-bottom: 25px;
+            width: fit-content;
+            transition: transform .3s linear;   
+        }
+
+        p.cta:hover{
+            transform: translateY(-.2em);
         }
 
         p.cta a{
-            padding:15px ;
-            border: #d778ff solid medium;
-            color: white;
-        }
-
-        p.cta a:hover{
             border: #720e9e solid thin;
             color: white;
             background-color: #720e9e;
+            padding:15px ;         
+            
+        }
+
+        p.cta a:hover{
+            border: #bb1cff solid medium;
+            background-color: #bb1cff;
+            color: white;
         }
 
         .service{
@@ -218,12 +235,63 @@
         }
 
         .service article:hover{
-            padding: 10px;
            border: none;
-            box-shadow: inset 5px 5px 5px 5px rgb(0, 0, 0);
             box-shadow:  5px 5px 5px 10px black;
             
         }
+
+        .proj{
+            width:clamp(260px,90%,900px);
+            margin:auto;
+            padding: 10px;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            background-color: rgba(245, 245, 245, 0.342);
+            color: rgb(15, 15, 15);
+            line-height: 2em;   
+            box-shadow: 2px 2px 10px 5px #9d9b9e,
+            -2px -2px 10px 5px #9d9b9e;     
+            animation: float 3s linear 0s infinite forwards;    
+        }
+
+        .proj:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes float{
+            0%{
+                transform: translateY(0em);
+                box-shadow: 2px 2px 10px 5px #9d9b9e,
+            -2px -2px 10px 5px #9d9b9e; 
+            }
+
+            50%{
+                transform: translateY(.4em);
+                box-shadow: -6px -6px 10px 5px #9d9b9e,
+            0px 0px 10px 5px #9d9b9e; 
+            }
+
+            100%{
+                transform: translateY(0em);
+                box-shadow: 3px 3px 10px 5px #9d9b9e,
+            -3px -3px 10px 5px #9d9b9e; 
+            }
+        }
+
+        .proj h2{
+            color: #720e9e;
+            padding-bottom: 10px;
+        }
+
+        .proj p a:hover{
+            color: rgb(0, 110, 255);
+            text-decoration: underline;
+        }
+
+        .proj p a{
+            color: rgb(0, 110, 255);
+        }
+
 
         .contact{
             width: clamp(270px, 80%, 1100px);
@@ -364,6 +432,7 @@
             background-color:black;
             color: white;
             padding-left: 10px;
+            width: 100%;
             padding-top: 30px;
             padding-bottom: 10px;
             line-height: 3.5em;
@@ -374,6 +443,14 @@
 
         p.social{
     word-spacing: 15px;
+}
+
+footer .formcov{
+    width: clamp(260px, 90%, 400px);
+    background-color: rgba(61, 61, 61, 0.473);
+    padding-left: 20px;
+    border-radius: 10px;
+    margin: auto;
 }
 
 footer form input{
@@ -393,15 +470,26 @@ footer form input[type=submit]{
     border: white medium solid;
     background-color: white;
     text-transform: uppercase;
+    cursor: pointer;
     font-weight: 400;
     text-indent: 0rem;
     color: black;
+    transition: transform .3s linear;
+}
+
+form h1.p{
+    line-height: 1.2em;
+    font-family:  'Brush Script MT', 'Brush Script Std', cursive;
+    color:whitesmoke;
+    color:#c43aff;
+    font-weight: 400;
 }
 
 footer form input[type=submit]:focus, footer form input[type=submit]:hover{
-    transform: translateY(-.4em);
-    background-color: transparent;
-    color: white;
+    transform: translateY(-.3em);
+    background-color: rgb(194, 194, 194);
+    border: rgb(194, 194, 194) medium solid;
+    color: rgb(31, 31, 31);
 
 }
 
@@ -409,21 +497,24 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
 
  footer form input:focus{
     color: white;
-    font-family:'Courier New', Courier, monospace;
     font-weight: normal;
     font-size: 18px;
     transform: translateY(-.7em);
 }
 
         a.smicon img{
-           width: 30px;
+           width: 40px;
            object-fit: contain;
-           height: 30px;
+           height: 40px;
            transition: all .2s ease-in-out;
         }
 
             a.smicon img:hover, a.smicon img:active{
-            transform:translateY(-.3em);
+            transform:translateY(-.1em);
+       }
+
+       p.copy{
+        margin-left: 10px;
        }
 
 
@@ -484,7 +575,7 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
             <div class="tag">
                 <h1 class="hi">Hola</h1>
                 <h1 class="main">Nothing is perfect in this world so, lets create one </h1>
-                <h2>Own your website at just ₹1499/- for a lifetime</h2>
+                <p class="h">Own your website at just <span class="price">₹1499/-</span> for a lifetime</p>
                 <p class="cta">
                     <a href="#footer">Own now</a>
                 </p>
@@ -496,7 +587,7 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
                 <article>
                     <h1>
                         Become powerful in the world of digital reality. 
-                        Single shot payment websites only for ₹1499/-
+                        Single shot payment websites only for <span class="price2">₹1499/-</span>
                     </h1>
                 </article>
                 
@@ -505,6 +596,12 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
 
                 </article>
 
+            </div>
+
+            <div class="proj">
+                <h2>My projects</h2>
+                <p><a href="https://dhananjaydolly.github.io/dhananjay/">Dhananjay -A freelancer's personal digital card</a></p>
+                 <p><a href="https://sabsset.github.io/mahayuvothsava/">Mahayuvothsava -college fest information updates</a></p>
             </div>
     
         </div>
@@ -539,10 +636,12 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
         </div>
 
         <footer id="footer">
+            <div class="formcov">
             <form method="post" action="https://formspree.io/f/mvoezgoq">
-                <label><p> Name: <input type="name" name="name"  size="15"></p></label>
-                <label><p>Contact number: <input type="tel" name="ph-number" size="15"></p></label>
-                <label><p>Email: <input type="email" name="email" size="15"></p></label>
+                <h1 class="p">Let's Connect</h1>
+                <label><p> Name:</p><p> <input type="name" name="name"  size="15" required></p></label>
+                <label><p>Contact number:</p><p> <input type="tel" name="ph-number" size="15"></p></label>
+                <label><p>Email:</p><p> <input type="email" name="email" size="15"></p></label>
                 <p><input type="submit" name="submitted" value="submit"></p>
             </form>
 
@@ -551,8 +650,10 @@ footer form input[type=submit]:focus, footer form input[type=submit]:hover{
                     <a href="mailto:yathishwebdesign@gmail.com" target="_blank" class="smicon"><img src="emailwhite.png" alt="email logo"></a>    
                     <a href="https://wa.me/message/ZDG3U4YFKA4JG1" target="_blank" class="smicon"><img src="whatsappwhite.png" alt="whatsapp logo"></a></p></article>
             <article>
+                
+            </div>
 
-                <p>&#169; 2024 Yathish. All Rights Reserved.</p>
+                <p class="copy"> &#169; 2024 Yathish. All Rights Reserved.</p>
         </footer>
         
     </body>
