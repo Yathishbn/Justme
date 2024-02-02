@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+    <head>                                                                            <!--head-->
+
+        <meta charset="UTF-8">                                                        <!--meta-->
+        <meta name="viewport" content="width=device-width , initial-scale=1.0 , maximum-scale=1.0 , user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content=" ">
+        <title>  </title>                                                             <!--title-->
+
+        <link href="" type="text/css" rel="stylesheet" />                             <!--link-->
+        <link href="" type="text/css" rel="stylesheet" />
+
+        <style type="text/css">      
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body{
+            font-family: 'montserrat', Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-position: center;
+            background-image: url(form.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .body{
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.493);
+            color: whitesmoke;
+        }
+
+        .head h1, h2{
+            padding: 15px;
+            color:whitesmoke;
+            width:  fit-content;
+            font-weight: 400;
+            
+            text-transform: capitalize;
+           
+        }
+
+        form{
+            width: clamp(270px,90%,1000px);
+            margin-top: 20px;
+            padding: 15px;
+           
+        }
+
+        .input-group{
+            position:relative;
+        }
+
+        input{
+            width: clamp(250px,80%, 600px);
+            line-height: 1.6em;
+            padding: 10px 20px;
+            outline: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            background-color: antiquewhite;
+        }
+
+        .text{
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: rgb(97, 97, 97);
+            background-color: antiquewhite;
+            text-transform: uppercase;
+            transition: all .3s linear;
+
+        }
+
+        .text::after{
+            content: '*';
+            color: rgb(105, 0, 0);
+        }
+
+        input:focus + .text,
+        input:valid + .text{
+            color:black;
+            padding: 0px 5px;
+            border-left: thin solid black;
+            border-right: thin solid black;
+            top: -3px;
+        }
+
+        input:focus + .text::after,
+        input:valid + .text::after{
+            content: none;
+        }
+
+        input#name{
+            text-transform: uppercase;
+        }
+
+        input[type="submit"]{
+            text-transform: uppercase;
+            font-weight: bolder;
+            outline: none;
+            background-color: rgb(174, 0, 255);
+            color: whitesmoke;
+        }
+
+        .back{
+            justify-self:left;
+
+        }
+
+        .back p a{
+            color:rgb(177, 177, 177);
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        @media (max-width:500px) {
+            body{
+                font-size: 17px;
+            }
+        }
+
+        </style>                                                                        <!--style-->
+        
+    </head>
+
+    <body>                                                                             <!--body-->
+
+        <div class="body">
+
+            <div class="back"><p><a href="index.html">go back</a></p></div>
+
+        <div class="head">
+            <h1>time to become stronger</h1>
+            <h2>take initiative now </h2>
+        </div>
+
+        <form action="https://formspree.io/f/mvoezgoq" method="post">
+            
+                <div class="input-group">
+                    <input type="name" id="name" name="name" required>
+                    <label class="text" for="name">name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label class="text" for="name">email</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="tel" name="ph-number" required>
+                    <label class="text" for="name">contact no</label>
+                </div>
+
+                <input type="submit" name="ownsubmit" value="submit"/>
+
+            
+        </form>
+
+        </div>
+
+    </body>
+
+</html>

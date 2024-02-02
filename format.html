@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+
+    <head>                                                                            <!--head-->
+
+        <meta charset="UTF-8">                                                        <!--meta-->
+        <meta name="viewport" content="width=device-width , initial-scale=1.0 , maximum-scale=1.0 , user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content=" ">
+        <title> border format </title>                                                             <!--title-->
+
+        <link href="" type="text/css" rel="stylesheet" />                             <!--link-->
+        <link href="" type="text/css" rel="stylesheet" />
+
+        <style type="text/css"> 
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 20px;
+            font-family: 'montserrat', Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6em;
+            background-color: whitesmoke;
+            color: rgb(41, 41, 41);
+            scroll-behavior: smooth;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        header{
+            display: flex;
+            background-color: #052c47;
+            align-items: center;
+            padding:0px 4%;
+            text-transform: capitalize;
+            justify-content:space-between;
+            z-index: 10;
+        }
+
+        .logo h1{
+            color:whitesmoke;
+            padding: 20px;
+            font-weight: lighter;
+        }
+
+        
+        header .nav nav ul{
+            list-style: none;
+        }
+
+        header .nav nav ul li{
+            position: relative;
+            display: inline;
+            width: fit-content;
+            float: left;
+        }
+        
+
+        header .nav nav ul li a{
+            padding: 20px;
+            width: fit-content;
+            text-decoration: none;
+            color:rgb(185, 185, 185);
+            display: block;
+        }
+
+        header .nav nav ul li a:hover{
+            background-color: #01497c;
+            color: whitesmoke;
+        }
+
+        header .nav nav ul li ul{
+            position: absolute;
+            left: 0;
+            background-color: #052c47;
+            width: 150px;
+            display: none;
+        }
+
+        header .nav nav ul li ul li{
+            width: 100%;
+        }
+
+        header .nav nav ul li:hover > ul,
+        header .nav nav ul li:active > ul
+        header .nav nav ul li:focus-within > ul{
+            display: inline;
+        }
+
+        #check{
+            display:none;
+        }
+
+        header label{
+            display: none;
+        }
+
+        
+
+        .hero{
+            min-height: 80vh;
+            height: fit-content;
+            display: grid;
+            background-color: #003153;
+            background-color: #052c47;
+            color: whitesmoke;
+            grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+            gap: 1.5em;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .first img {
+            width: clamp(260px, 90%, 500px);
+            object-fit: cover;
+            border-radius: 30% 70% 66% 34% / 45% 40% 60% 55% ;
+        }
+
+        .tag {
+            width: clamp(260px, 90%, 500px);
+            padding: 10px;
+            line-height: 1.5em;
+        }
+
+        .tag h1{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            line-height: 1.2em;
+        }
+
+        p.cta {
+            font-weight: bolder;
+            width: fit-content;
+            margin-top: 30px;
+        }
+
+        p.cta a{
+            width: 100%;
+            height: 100%;
+            background-color: #FF3800;
+            text-transform: uppercase;
+            padding: 20px;
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        p.cta a:hover{
+            background-color: #ff5e32;
+        }
+
+        .pas{
+            width: 100vw;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            background-color: #002641;
+            color: whitesmoke;
+        }
+
+        .pashead h1{
+            width: fit-content;
+            margin: auto;
+            line-height: 1.2em;
+            padding: 15px;
+            margin-top:15px ;
+            margin-bottom: 15px;
+        }
+
+        .pascont{
+            display: grid;
+            width: clamp(270px,90%,1000px);
+            margin: auto;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 1.5em;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .pas .image img{
+            object-fit: cover;
+            width:clamp(260px,85%,400px);
+        }
+
+        .description{
+            box-shadow: 1px 1px 15px 5px #01097c,
+             -1px -1px 15px 5px #01097c;
+            padding: 20px;
+        }
+
+        .pas p.cta{
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .reviews{
+            width: 100vw;
+            background-color: whitesmoke;
+            color: rgb(20, 20, 20);
+        }
+
+        .reviewcont{
+            width: clamp(270px,90%, 1000px);
+            display: flex;
+            gap: 2em;
+            margin: auto;
+            margin-top: 15px;
+            flex-direction: column;
+        }
+
+        .reviews h1{
+            text-transform: uppercase;
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 1.5em;
+            font-weight: 400;
+            line-height: 1.3em;
+            align-self: center;
+        }
+
+        .indreview{
+            width: clamp(260px,85%, 480px);
+            box-shadow: 0px 0px 15px 5px #aaaaaa,
+             -0px -0px 15px 5px #aaaaaa;
+             padding: 20px;
+        }
+
+        .indreview h2{
+            text-transform: capitalize;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .indreview img{
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            float: right;
+            object-fit: cover;
+        }
+
+        .reviewtwo{
+            align-self: flex-end;
+        }
+
+        .about{
+            background-image: url(background2.jpg);
+            margin-top: 50px;
+            background-position:center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .message{
+            background-color:rgba(0, 0, 0, 0.438) ;
+            color: white;
+            display: grid;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .message h1{
+            color:#2d36a8;
+            padding: 20px;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .message p{
+            width:clamp(250px, 90%, 600px);
+        }
+
+        .footer{
+            padding: 20px;
+            color: whitesmoke;
+            background-color: #001f3f;
+        }
+
+        .footer a{
+            color: whitesmoke;
+        }
+
+        p.social{
+    word-spacing: 15px;
+}
+
+.footer .formcov{
+    width: clamp(260px, 90%, 400px);
+    background-color: rgba(61, 61, 61, 0.473);
+    padding-left: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.footer form input{
+    background-color: transparent;
+    border: none;
+    text-indent: 1rem;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: grey;
+    border-bottom: white thin solid;
+  line-height: 2em;
+    transition: all .2s ease-in-out;
+    width: 250px;
+}
+
+.footer form input[type=submit]{
+    border: white medium solid;
+    margin-top: 15px;
+    background-color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    text-indent: 0rem;
+    color: black;
+    transition: transform .3s linear;
+}
+
+form h1.p{
+    line-height: 1.2em;
+    font-family:  'Brush Script MT', 'Brush Script Std', cursive;
+    color:whitesmoke;
+    color:#c43aff;
+    font-weight: 400;
+}
+
+.footer form input[type=submit]:focus, .footer form input[type=submit]:hover{
+    transform: translateY(-.1em);
+    background-color: rgb(194, 194, 194);
+    border: rgb(194, 194, 194) medium solid;
+    color: rgb(31, 31, 31);
+
+}
+
+
+
+ .footer form input:focus{
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    transform: translateY(-.2em);
+}
+
+        a.smicon img{
+           width: 40px;
+           object-fit: contain;
+           height: 40px;
+           transition: all .2s ease-in-out;
+        }
+
+            a.smicon img:hover, a.smicon img:active{
+            transform:translateY(-.1em);
+       }
+
+.footer .outro{
+    display: grid;
+    width: clamp(260px, 90%, 1100px);
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    margin: auto;
+    gap: 2rem;
+    padding: 20px;
+}       
+
+
+        
+
+
+        @media (max-width:500px){
+            body{
+                font-size: 18px;
+            }
+        }
+
+
+
+        @media (max-width:900px){
+
+           header .nav{
+                top: -100%;
+                background-color: #052c47;
+                position: absolute;
+            }
+
+            header .nav nav ul {
+                position: relative;
+            }
+
+            header .nav nav ul li{
+                width: 100%;
+            }
+
+            header .nav nav ul li ul{
+                position: inherit;
+            }
+
+            header .nav nav ul li ul li a{
+               width: 100%;
+                background-color: #074068;
+            }
+
+            header .nav {
+                width: 70%;
+            }
+
+
+            header label{
+                display: initial;
+            }
+
+            #check:checked ~ .nav {
+                top: 80px;
+                left: 0;
+                right: 0;
+            }
+
+
+
+            header label{
+            position: relative;
+            display: flex;
+            margin-right: 20px;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+         .middle{
+            height: 7px;
+            width: 40px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+        .bottom{
+            top: 13px;
+            height: 7px;
+            width: 40px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+         .top{
+            bottom: 7px;
+            height: 7px;
+            width: 40px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+        #check:checked ~ label .top{
+            transform:rotate(-45deg);
+            transform-origin: right;
+            
+        }
+
+        #check:checked ~  label .bottom{
+            transform:rotate(45deg);
+            transform-origin: right;
+            
+        }
+
+        #check:checked ~  label .middle{
+            transform:translatex(20px);
+            opacity: 0;
+            
+        }
+
+    }
+
+        </style>                                                                        <!--style-->
+        
+    </head>
+
+    <body>                                                                             <!--body-->
+
+        
+
+            <header>
+                <div class="logo">
+                    <h1>LOGO</h1>
+                </div>
+
+                <input type="checkbox" id="check">
+
+             <label for="check">
+                    <span class="top" id="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+            </label>
+
+                <div class="nav">
+
+                    <nav>
+
+                        <ul>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#review">reviews</a></li>
+                            <li><a>service +</a>
+                                <ul>
+                                    <li><a href="black.html">benefits</a></li>
+                                    <li><a href="black.html">pricing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="black.html">media</a></li>
+                            <li><a href="booknow.html" id="cont">contact</a></li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </header>
+            
+            <div class="hero">                                                         <!--hero-->
+                <div class="tag">
+                    <h1>Design Your Presence</h1>
+                    <p>Unlock the potential of your brand online. A website that speaks your language – simple, effective, and all about you!</p>
+                     <p class="cta"><a href="booknow.html">book now</a></p>
+                </div>
+
+                <div class="first">
+                    <img src="webuser.jpg" alt="happy customer using website"/>
+                </div>
+            </div>
+            
+
+            <div class="pas">                                                          <!--content-->
+                <div class="pashead"><h1>Design It Your Way: A Format Without Limits</h1></div>
+                <div class="pascont">
+                <div class="image"><img src="customweb.jpg" alt="a responsive website with custom design"></div>
+                <div class="description">
+                    <p>Unleash your vision! This versatile website format allows you to present your logo, share essential information, highlight your services, and more. Simplicity with endless possibilities, tailored exclusively for you</p>
+                </div>
+                </div>
+                <p class="cta"><a href="booknow.html">book now</a></p>
+            </div>
+
+            <div class="reviews" id="review">
+                <h1>Your testinominals </h1>
+                <div class="reviewcont">
+                <div class="indreview reviewone">
+                    <blockquote>"Incredible service! The website design exceeded expectations, and the pricing was very reasonable. The GitHub hosting made it user-friendly and cost-effective"</blockquote>
+                   <picture>
+                    <img src="test1.jpg" alt="Testinominal profile picure">
+                    <h2>Testinominal one</h2>
+                   </picture> 
+                </div>
+
+                <div class="indreview reviewtwo">
+                    <blockquote>"The web solution was fantastic, perfectly tailored to my budget. The design creativity and GitHub hosting made the process smooth and affordable."</blockquote>
+                   <picture>
+                    <img src="test2.jpg" alt="Testinominal profile picure">
+                    <h2>Testinominal two</h2>
+                   </picture> 
+                </div>
+
+                <div class="indreview reviewthree">
+                    <blockquote>"Extremely happy with the outcome! The cost-effective website delivered by the team surpassed all expectations. Their attention to detail and commitment to quality were impressive."</blockquote>
+                   <picture>
+                    <img src="test3.jpg" alt="Testinominal profile picure">
+                    <h2>Testinominal three</h2>
+                   </picture> 
+                </div>
+                </div>
+
+            </div>
+            
+            <div class="about" id="about">
+                <div class="message">
+                    <h1>About</h1>
+                    <p>In the digital realm, your website is more than a page—it's your key to a thriving online presence. I prioritize quality, crafting websites tailored to your unique needs.The more information you provide us,  I enhance the website's effectiveness. For small businesses and local stores, a compelling online presence is not just an option; it's an essential tool for growth. Let's elevate your online impact together!
+                    </p>
+                    <p class="cta"><a href="booknow.html">book now</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <div class="outro">
+                    <article>
+                        <p>
+                            Connect, Impress, Succeed - Your online journey begins here. Enhance your business with our customizable websites. Explore 'Your Logo,' share 'Your Information,' and promote 'Your Services.' Elevate your online identity for lasting success
+                        </p>
+                    </article>
+                    <article>
+                        <form method="post" action="https://formspree.io/f/mvoezgoq">
+                            <h1 class="p">Let's Connect</h1>
+                            <label><p> Name:</p><p> <input type="name" name="name"  size="15" required></p></label>
+                            <label><p>Contact number:</p><p> <input type="tel" name="ph-number" size="15"></p></label>
+                            <label><p>Email:</p><p> <input type="email" name="email" size="15"></p></label>
+                            <p><input type="submit" name="submitted" value="submit"></p>
+                        </form>
+            
+                        <article><p>Contact on</p>
+                            <p class="social"><a href="https://www.instagram.com/insta_yathi_05?igsh=eDZkdGpqcjcybmc4" target="_blank" class="smicon"><img src="instagramwhite.png" alt="instagram logo"></a>
+                                <a href="mailto:yathishwebdesign@gmail.com" target="_blank" class="smicon"><img src="emailwhite.png" alt="email logo"></a>    
+                                <a href="https://wa.me/message/ZDG3U4YFKA4JG1" target="_blank" class="smicon"><img src="whatsappwhite.png" alt="whatsapp logo"></a></p></article>
+                       
+                    </article>
+                </div>
+                <div class="copy">
+                    <p> &#169; 2024 <a href="https://yathishbn.github.io/justme">Yathish</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+
+        
+
+    </body>
+
+</html>
