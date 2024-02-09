@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width , initial-scale=1.0 , maximum-scale=1.0 , user-scalable=no">
         <meta name="keywords" content="">
         <meta name="description" content=" ">
-        <title> border format </title>                                                             <!--title-->
+        <title>Basic format of small business website</title>                                                             <!--title-->
 
         <link href="" type="text/css" rel="stylesheet" />                             <!--link-->
         <link href="" type="text/css" rel="stylesheet" />
@@ -40,6 +40,8 @@
             display: flex;
             background-color: #052c47;
             align-items: center;
+            border-bottom: solid  medium;
+            border-image: linear-gradient(to left, transparent 20%, #000a25 80%) 100% 1;
             padding:0px 4%;
             text-transform: capitalize;
             justify-content:space-between;
@@ -397,10 +399,19 @@ form h1.p{
         @media (max-width:900px){
 
            header .nav{
-                top: -100%;
-                background-color: #052c47;
+                top: 0;
+                left: -150%;
+                right: 0;
+                background-color: #000a25;
+                height: 100vh;
+                transition: all 0.5s ease-in-out;
                 position: absolute;
             }
+
+            header .nav nav ul li a:hover{
+            background-color: #020b24;
+            color: whitesmoke;
+        }
 
             header .nav nav ul {
                 position: relative;
@@ -416,7 +427,7 @@ form h1.p{
 
             header .nav nav ul li ul li a{
                width: 100%;
-                background-color: #074068;
+                background-color: #050b1b;
             }
 
             header .nav {
@@ -429,15 +440,14 @@ form h1.p{
             }
 
             #check:checked ~ .nav {
-                top: 80px;
-                left: 0;
-                right: 0;
+                left: 0; 
             }
 
 
 
             header label{
             position: relative;
+            margin-top: -12px;
             display: flex;
             margin-right: 20px;
             justify-content: center;
@@ -445,8 +455,8 @@ form h1.p{
         }
 
          .middle{
-            height: 7px;
-            width: 40px;
+            height: 5px;
+            width: 35px;
             background-color:whitesmoke;
             border-radius: 50px;
             position: absolute;
@@ -454,9 +464,9 @@ form h1.p{
         }
 
         .bottom{
-            top: 13px;
-            height: 7px;
-            width: 40px;
+            top: 10px;
+            height: 5px;
+            width: 35px;
             background-color:whitesmoke;
             border-radius: 50px;
             position: absolute;
@@ -464,9 +474,9 @@ form h1.p{
         }
 
          .top{
-            bottom: 7px;
-            height: 7px;
-            width: 40px;
+            top: -10px;
+            height: 5px;
+            width: 35px;
             background-color:whitesmoke;
             border-radius: 50px;
             position: absolute;
@@ -474,13 +484,13 @@ form h1.p{
         }
 
         #check:checked ~ label .top{
-            transform:rotate(-45deg);
+            transform:rotate(-35deg);
             transform-origin: right;
             
         }
 
         #check:checked ~  label .bottom{
-            transform:rotate(45deg);
+            transform:rotate(35deg);
             transform-origin: right;
             
         }
